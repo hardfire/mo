@@ -1,0 +1,33 @@
+#container{
+	width:800px;
+	margin:0px auto;
+}
+#container h1{
+	text-align:center;
+}
+#mos{
+	float:right;
+	margin:0 70px 0 0;
+	list-style-type:none;
+	padding:0px;
+	cursor:pointer;
+}
+#mos li{
+	border:1px solid #ccc;
+	margin:10px;
+	padding:4px;
+}
+#mos li:hover {
+	border-color:#777;
+	background:#eee;
+}
+#mocanvas{
+	border:1px solid #ccc;
+}
+#canvas-container{
+	float:left;
+	background:url('img/dad.jpg') no-repeat center;
+}
+.clear{
+	clear:both;
+}
