@@ -31,3 +31,8 @@
 .clear{
 	clear:both;
 }
+#status, #status a{
+	color:#999;
+	font-family: arial;
+	vertical-align:top;
+}

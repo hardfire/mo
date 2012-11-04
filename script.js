@@ -89,6 +89,7 @@
 	
 	function sendToImgur() {
 		canvas.deactivateAll();
+		document.getElementById('status').innerHTML = 'Uploading';
 		var image = canvas.toDataURL('jpeg').split(',')[1];
 		var fd = new FormData();
 		fd.append("key", "6528448c258cff474ca9701c5bab6927");
@@ -104,8 +105,9 @@
 		xhr.onload = function() {
 			// Big win!
 			// The URL of the image is:
-			JSON.parse(xhr.responseText).upload.links.imgur_page;
-			console.log(xhr.responsText);
+			var url = JSON.parse(xhr.responseText).upload.links.imgur_page;
+			document.getElementById('status').innerHTML = '<a href="'+url+'"> It\'s Up! </a>';
+			console.log(url);
 		}
 		// Ok, I don't handle the errors. An exercice for the reader.
 		// And now, we send the formdata
